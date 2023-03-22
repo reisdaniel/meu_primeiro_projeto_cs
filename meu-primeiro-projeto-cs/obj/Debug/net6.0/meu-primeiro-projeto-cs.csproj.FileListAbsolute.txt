@@ -1,0 +1,15 @@
+C:\Users\Danie\source\repos\meu-primeiro-projeto-cs\meu-primeiro-projeto-cs\bin\Debug\net6.0\meu-primeiro-projeto-cs.exe
+C:\Users\Danie\source\repos\meu-primeiro-projeto-cs\meu-primeiro-projeto-cs\bin\Debug\net6.0\meu-primeiro-projeto-cs.deps.json
+C:\Users\Danie\source\repos\meu-primeiro-projeto-cs\meu-primeiro-projeto-cs\bin\Debug\net6.0\meu-primeiro-projeto-cs.runtimeconfig.json
+C:\Users\Danie\source\repos\meu-primeiro-projeto-cs\meu-primeiro-projeto-cs\bin\Debug\net6.0\meu-primeiro-projeto-cs.dll
+C:\Users\Danie\source\repos\meu-primeiro-projeto-cs\meu-primeiro-projeto-cs\bin\Debug\net6.0\meu-primeiro-projeto-cs.pdb
+C:\Users\Danie\source\repos\meu-primeiro-projeto-cs\meu-primeiro-projeto-cs\obj\Debug\net6.0\meu-primeiro-projeto-cs.csproj.AssemblyReference.cache
+C:\Users\Danie\source\repos\meu-primeiro-projeto-cs\meu-primeiro-projeto-cs\obj\Debug\net6.0\meu-primeiro-projeto-cs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Danie\source\repos\meu-primeiro-projeto-cs\meu-primeiro-projeto-cs\obj\Debug\net6.0\meu-primeiro-projeto-cs.AssemblyInfoInputs.cache
+C:\Users\Danie\source\repos\meu-primeiro-projeto-cs\meu-primeiro-projeto-cs\obj\Debug\net6.0\meu-primeiro-projeto-cs.AssemblyInfo.cs
+C:\Users\Danie\source\repos\meu-primeiro-projeto-cs\meu-primeiro-projeto-cs\obj\Debug\net6.0\meu-primeiro-projeto-cs.csproj.CoreCompileInputs.cache
+C:\Users\Danie\source\repos\meu-primeiro-projeto-cs\meu-primeiro-projeto-cs\obj\Debug\net6.0\meu-primeiro-projeto-cs.dll
+C:\Users\Danie\source\repos\meu-primeiro-projeto-cs\meu-primeiro-projeto-cs\obj\Debug\net6.0\refint\meu-primeiro-projeto-cs.dll
+C:\Users\Danie\source\repos\meu-primeiro-projeto-cs\meu-primeiro-projeto-cs\obj\Debug\net6.0\meu-primeiro-projeto-cs.pdb
+C:\Users\Danie\source\repos\meu-primeiro-projeto-cs\meu-primeiro-projeto-cs\obj\Debug\net6.0\meu-primeiro-projeto-cs.genruntimeconfig.cache
+C:\Users\Danie\source\repos\meu-primeiro-projeto-cs\meu-primeiro-projeto-cs\obj\Debug\net6.0\ref\meu-primeiro-projeto-cs.dll
