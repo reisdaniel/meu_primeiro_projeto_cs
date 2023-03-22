@@ -115,7 +115,7 @@ namespace Calculadora
                     }
                     else
                     {
-                        Console.WriteLine("Opção inválida. Por favor, digite S ou N.");
+                        Console.WriteLine("Opção inválida. Por favor, digite S ou N");
                     }
                 }
             }
