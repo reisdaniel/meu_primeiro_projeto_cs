@@ -16,7 +16,7 @@ namespace Calculadora
                 while (!numValido)
                 {
                     Console.WriteLine("Digite o primeiro número: ");
-                    if (!double.TryParse(Console.ReadLine(), out num1))
+                    if (!double.TryParse(Console.ReadLine(), out num1) || num1 < 0)
                     {
                         Console.WriteLine("Número inválido. Por favor, tente novamente.");
                     }
@@ -31,7 +31,7 @@ namespace Calculadora
                 while (!numValido)
                 {
                     Console.WriteLine("Digite o segundo número: ");
-                    if (!double.TryParse(Console.ReadLine(), out num2))
+                    if (!double.TryParse(Console.ReadLine(), out num2) || num2 < 0)
                     {
                         Console.WriteLine("Número inválido. Por favor, tente novamente");
                     }
