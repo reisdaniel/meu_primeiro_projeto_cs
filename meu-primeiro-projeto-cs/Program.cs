@@ -10,13 +10,13 @@ namespace Calculadora
 
             while (!sair)
             {
-                double num1 = 0, num2 = 0;
+                double primeiroNumero = 0, segundoNumero = 0;
                 bool numValido = false;
 
                 while (!numValido)
                 {
                     Console.WriteLine("Digite o primeiro número: ");
-                    if (!double.TryParse(Console.ReadLine(), out num1) || num1 < 0)
+                    if (!double.TryParse(Console.ReadLine(), out primeiroNumero) || primeiroNumero < 0)
                     {
                         Console.WriteLine("Número inválido. Por favor, tente novamente.");
                     }
@@ -31,7 +31,7 @@ namespace Calculadora
                 while (!numValido)
                 {
                     Console.WriteLine("Digite o segundo número: ");
-                    if (!double.TryParse(Console.ReadLine(), out num2) || num2 < 0)
+                    if (!double.TryParse(Console.ReadLine(), out segundoNumero) || segundoNumero < 0)
                     {
                         Console.WriteLine("Número inválido. Por favor, tente novamente");
                     }
@@ -68,27 +68,27 @@ namespace Calculadora
                 switch (escolha)
                 {
                     case 1:
-                        resultado = num1 + num2;
+                        resultado = primeiroNumero + segundoNumero;
                         break;
                     case 2:
-                        resultado = num1 - num2;
+                        resultado = primeiroNumero - segundoNumero;
                         break;
                     case 3:
-                        resultado = num1 * num2;
+                        resultado = primeiroNumero * segundoNumero;
                         break;
                     case 4:
-                        if (num2 == 0)
+                        if (segundoNumero == 0)
                         {
                             Console.WriteLine("Não é possível dividir por zero. Por favor, tente novamente.");
                         }
                         else
                         {
-                            resultado = num1 / num2;
+                            resultado = primeiroNumero / segundoNumero;
                         }
                         break;
                 }
 
-                if (escolha == 4 && num2 == 0) 
+                if (escolha == 4 && segundoNumero == 0) 
                 {
                     //não faz nada
                 }
