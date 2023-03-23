@@ -46,6 +46,8 @@ namespace Calculadora
                 Console.WriteLine("2. Subtração");
                 Console.WriteLine("3. Multiplicação");
                 Console.WriteLine("4. Divisão");
+                Console.WriteLine("5. Exponenciação");
+                Console.WriteLine("6. Radiciação");
 
                 int escolha = 0;
                 bool escolhaValida = false;
@@ -53,9 +55,9 @@ namespace Calculadora
                 while (!escolhaValida)
                 {
                     Console.WriteLine("Opção escolhida: ");
-                    if (!int.TryParse(Console.ReadLine(), out escolha) || escolha < 1 || escolha > 4)
+                    if (!int.TryParse(Console.ReadLine(), out escolha) || escolha < 1 || escolha > 6)
                     {
-                        Console.WriteLine("Opção inválida. Por favor, escolha um número de 1 a 4.");
+                        Console.WriteLine("Opção inválida. Por favor, escolha um número de 1 a 6.");
                     }
                     else
                     {
@@ -84,6 +86,23 @@ namespace Calculadora
                         else
                         {
                             resultado = primeiroNumero / segundoNumero;
+                        }
+                        break;
+                    case 5:
+                        resultado = Math.Pow(primeiroNumero, segundoNumero);
+                        break;
+                    case 6:
+                        if (segundoNumero == 0)
+                        {
+                            Console.WriteLine("Não é possível calcular a raiz quadrada de zero.");
+                        }
+                        else if (segundoNumero % 2 == 0 && primeiroNumero < 0) 
+                        {
+                            Console.WriteLine("Não é possível calcular a raiz quadrada par de um número negativo");
+                        }
+                        else
+                        {
+                            resultado = Math.Pow(primeiroNumero, 1.0 / segundoNumero);
                         }
                         break;
                 }
