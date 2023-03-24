@@ -73,43 +73,73 @@ namespace Calculadora
             }
         }
 
+        static double Soma(double a, double b)
+        {
+            return a + b;
+        }
+
+        static double Subtracao(double a, double b)
+        {
+            return a - b;
+        }
+
+        static double Multiplicacao(double a, double b)
+        {
+            return a * b;
+        }
+
+        static double Divisao(double a, double b)
+        {
+            if (b == 0)
+            {
+                Console.WriteLine("Não é possível dividir por zero.");
+                return double.NaN;
+            }
+            else
+            {
+                return a / b;
+            }
+        }
+
+        static double Exponenciacao(double a, double b)
+        {
+            return Math.Pow(a, b);
+        }
+
+        static double Radiciacao(double a, double b)
+        {
+            if (b == 0)
+            {
+                Console.WriteLine("Não é possível calcular a raiz quadrada de zero.");
+                return double.NaN;
+            }
+            else if (b % 2 == 0 && a < 0)
+            {
+                Console.WriteLine("Não é possível calcular a raiz quadrada par de um número negativo.");
+                return double.NaN;
+            }
+            else
+            {
+                return Math.Pow(a, 1.0 / b);
+            }
+        }
+
         static double ExecutarOperacao(double primeiroNumero, double segundoNumero, int escolha)
         {
             switch (escolha)
             {
                 case SOMA:
-                    return primeiroNumero + segundoNumero;
+                    return Soma(primeiroNumero,segundoNumero);
                 case SUBTRACAO:
-                    return primeiroNumero - segundoNumero;
+                    return Subtracao(primeiroNumero,segundoNumero);
                 case MULTIPLICACAO:
-                    return primeiroNumero * segundoNumero;
+                    return Multiplicacao(primeiroNumero,segundoNumero);
                 case DIVISAO:
-                    if (segundoNumero == 0)
-                    {
-                        Console.WriteLine("Não é possível dividir por zero. Por favor, tente novamente.");
-                        return double.NaN;
-                    }
-                    else
-                    {
-                        return primeiroNumero / segundoNumero;
-                    }
+                    return Divisao(primeiroNumero,segundoNumero);
                 case EXPONENCIACAO:
-                    return Math.Pow(primeiroNumero, segundoNumero);
+                    return Exponenciacao(primeiroNumero,segundoNumero);
                 case RADICIACAO:
-                    if (segundoNumero == 0)
-                    {
-                        Console.WriteLine("Não é possível calcular a raiz quadrada de zero.");
-                        return double.NaN;
-                    }
-                    else if (segundoNumero % 2 == 0 && primeiroNumero < 0)
-                    {
-                        Console.WriteLine("Não é possível calcular a raiz quadrada par de um número negativo");
-                        return double.NaN;
-                    }
-                    else
-                    {
-                        return Math.Pow(primeiroNumero, 1.0 / segundoNumero);
-                    }
+                    return Radiciacao(primeiroNumero, segundoNumero);
                 default:
                     Console.WriteLine("Opção inválida. Por favor, escolha um número de 1 a 6.");
                     return double.NaN;
