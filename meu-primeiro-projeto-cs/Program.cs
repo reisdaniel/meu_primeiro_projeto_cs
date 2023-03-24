@@ -4,6 +4,12 @@ namespace Calculadora
 {
     class Program
     {
+        const int SOMA = 1;
+        const int SUBTRACAO = 2;
+        const int MULTIPLICACAO = 3;
+        const int DIVISAO = 4;
+        const int EXPONENCIACAO = 5;
+        const int RADICIACAO = 6;
         static void Main(string[] args)
         {
             while (true)
@@ -48,12 +54,12 @@ namespace Calculadora
             while (true)
             {
                 Console.WriteLine("Escolha uma operação matemática:");
-                Console.WriteLine("1. Soma");
-                Console.WriteLine("2. Subtração");
-                Console.WriteLine("3. Multiplicação");
-                Console.WriteLine("4. Divisão");
-                Console.WriteLine("5. Exponenciação");
-                Console.WriteLine("6. Radiciação");
+                Console.WriteLine($"{SOMA}. Soma");
+                Console.WriteLine($"{SUBTRACAO}. Subtração");
+                Console.WriteLine($"{MULTIPLICACAO}. Multiplicação");
+                Console.WriteLine($"{DIVISAO}. Divisão");
+                Console.WriteLine($"{EXPONENCIACAO}. Exponenciação");
+                Console.WriteLine($"{RADICIACAO}. Radiciação");
 
                 Console.Write("Opção escolhida: ");
                 if (int.TryParse(Console.ReadLine(), out int escolha) && escolha >= 1 && escolha <= 6)
@@ -71,13 +77,13 @@ namespace Calculadora
         {
             switch (escolha)
             {
-                case 1:
+                case SOMA:
                     return primeiroNumero + segundoNumero;
-                case 2:
+                case SUBTRACAO:
                     return primeiroNumero - segundoNumero;
-                case 3:
+                case MULTIPLICACAO:
                     return primeiroNumero * segundoNumero;
-                case 4:
+                case DIVISAO:
                     if (segundoNumero == 0)
                     {
                         Console.WriteLine("Não é possível dividir por zero. Por favor, tente novamente.");
@@ -87,9 +93,9 @@ namespace Calculadora
                     {
                         return primeiroNumero / segundoNumero;
                     }
-                case 5:
+                case EXPONENCIACAO:
                     return Math.Pow(primeiroNumero, segundoNumero);
-                case 6:
+                case RADICIACAO:
                     if (segundoNumero == 0)
                     {
                         Console.WriteLine("Não é possível calcular a raiz quadrada de zero.");
