@@ -10,6 +10,9 @@ namespace Calculadora
         const int DIVISAO = 4;
         const int EXPONENCIACAO = 5;
         const int RADICIACAO = 6;
+        const int PORCENTAGEM = 7;
+        const int LOGARITMO = 8;
+
         static void Main(string[] args)
         {
             while (true)
@@ -60,15 +63,17 @@ namespace Calculadora
                 Console.WriteLine($"{DIVISAO}. Divisão");
                 Console.WriteLine($"{EXPONENCIACAO}. Exponenciação");
                 Console.WriteLine($"{RADICIACAO}. Radiciação");
+                Console.WriteLine($"{PORCENTAGEM}. Porcentagem");
+                Console.WriteLine($"{LOGARITMO}. Logaritmo");
 
                 Console.Write("Opção escolhida: ");
-                if (int.TryParse(Console.ReadLine(), out int escolha) && escolha >= 1 && escolha <= 6)
+                if (int.TryParse(Console.ReadLine(), out int escolha) && escolha >= 1 && escolha <= 8)
                 {
                     return escolha;
                 }
                 else
                 {
-                    Console.WriteLine("Opção inválida. Por favor, escolha um número de 1 a 6.");
+                    Console.WriteLine("Opção inválida. Por favor, escolha um número de 1 a 8.");
                 }
             }
         }
@@ -124,6 +129,24 @@ namespace Calculadora
             }
         }
 
+        static double Porcentagem(double a, double b)
+        {
+            return a * b / 100;
+        }
+
+        static double Logaritmo(double a, double b)
+        {
+            if (a <= 0 ||  b <= 0)
+            {
+                Console.WriteLine("Não é possível calcular o logaritmo de um número negativo.");
+                return double.NaN;
+            }
+            else
+            {
+                return Math.Log(a, b);
+            }
+        }
+
         static double ExecutarOperacao(double primeiroNumero, double segundoNumero, int escolha)
         {
             switch (escolha)
@@ -140,6 +163,10 @@ namespace Calculadora
                     return Exponenciacao(primeiroNumero,segundoNumero);
                 case RADICIACAO:
                     return Radiciacao(primeiroNumero, segundoNumero);
+                case PORCENTAGEM:
+                    return Porcentagem(primeiroNumero, segundoNumero) ;
+                case LOGARITMO:
+                    return Logaritmo(primeiroNumero, segundoNumero);
                 default:
                     Console.WriteLine("Opção inválida. Por favor, escolha um número de 1 a 6.");
                     return double.NaN;
