@@ -1,4 +1,5 @@
 ﻿using System;
+using Calculadora;
 
 namespace Calculadora
 {
@@ -78,95 +79,28 @@ namespace Calculadora
             }
         }
 
-        static double Soma(double a, double b)
-        {
-            return a + b;
-        }
-
-        static double Subtracao(double a, double b)
-        {
-            return a - b;
-        }
-
-        static double Multiplicacao(double a, double b)
-        {
-            return a * b;
-        }
-
-        static double Divisao(double a, double b)
-        {
-            if (b == 0)
-            {
-                Console.WriteLine("Não é possível dividir por zero.");
-                return double.NaN;
-            }
-            else
-            {
-                return a / b;
-            }
-        }
-
-        static double Exponenciacao(double a, double b)
-        {
-            return Math.Pow(a, b);
-        }
-
-        static double Radiciacao(double a, double b)
-        {
-            if (b == 0)
-            {
-                Console.WriteLine("Não é possível calcular a raiz quadrada de zero.");
-                return double.NaN;
-            }
-            else if (b % 2 == 0 && a < 0)
-            {
-                Console.WriteLine("Não é possível calcular a raiz quadrada par de um número negativo.");
-                return double.NaN;
-            }
-            else
-            {
-                return Math.Pow(a, 1.0 / b);
-            }
-        }
-
-        static double Porcentagem(double a, double b)
-        {
-            return a * b / 100;
-        }
-
-        static double Logaritmo(double a, double b)
-        {
-            if (a <= 0 ||  b <= 0)
-            {
-                Console.WriteLine("Não é possível calcular o logaritmo de um número negativo.");
-                return double.NaN;
-            }
-            else
-            {
-                return Math.Log(a, b);
-            }
-        }
+        /**/
 
         static double ExecutarOperacao(double primeiroNumero, double segundoNumero, int escolha)
         {
             switch (escolha)
             {
                 case SOMA:
-                    return Soma(primeiroNumero,segundoNumero);
+                    return Operacoes.Soma(primeiroNumero,segundoNumero);
                 case SUBTRACAO:
-                    return Subtracao(primeiroNumero,segundoNumero);
+                    return Operacoes.Subtracao(primeiroNumero,segundoNumero);
                 case MULTIPLICACAO:
-                    return Multiplicacao(primeiroNumero,segundoNumero);
+                    return Operacoes.Multiplicacao(primeiroNumero,segundoNumero);
                 case DIVISAO:
-                    return Divisao(primeiroNumero,segundoNumero);
+                    return Operacoes.Divisao(primeiroNumero,segundoNumero);
                 case EXPONENCIACAO:
-                    return Exponenciacao(primeiroNumero,segundoNumero);
+                    return Operacoes.Exponenciacao(primeiroNumero,segundoNumero);
                 case RADICIACAO:
-                    return Radiciacao(primeiroNumero, segundoNumero);
+                    return Operacoes.Radiciacao(primeiroNumero, segundoNumero);
                 case PORCENTAGEM:
-                    return Porcentagem(primeiroNumero, segundoNumero) ;
+                    return Operacoes.Porcentagem(primeiroNumero, segundoNumero) ;
                 case LOGARITMO:
-                    return Logaritmo(primeiroNumero, segundoNumero);
+                    return Operacoes.Logaritmo(primeiroNumero, segundoNumero);
                 default:
                     Console.WriteLine("Opção inválida. Por favor, escolha um número de 1 a 6.");
                     return double.NaN;
