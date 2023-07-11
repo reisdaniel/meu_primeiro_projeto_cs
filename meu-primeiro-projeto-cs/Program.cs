@@ -26,14 +26,10 @@ namespace Calculadora
                 double resultado = ExecutarOperacao(primeiroNumero, segundoNumero, escolha);
 
                 if (!double.IsNaN(resultado))
-                {
                     Console.WriteLine($"Resultado: {resultado}");
-                }
 
                 if (!Continuar())
-                {
                     break;
-                }
             }
         }
 
@@ -43,13 +39,9 @@ namespace Calculadora
             {
                 Console.Write(mensagem);
                 if (double.TryParse(Console.ReadLine(), out double numero) && numero >= 0)
-                {
                     return numero;
-                }
                 else
-                {
                     Console.WriteLine("Número inválido. Por favor, tente novamente.");
-                }
             }
         }
 
@@ -69,17 +61,11 @@ namespace Calculadora
 
                 Console.Write("Opção escolhida: ");
                 if (int.TryParse(Console.ReadLine(), out int escolha) && escolha >= 1 && escolha <= 8)
-                {
                     return escolha;
-                }
                 else
-                {
                     Console.WriteLine("Opção inválida. Por favor, escolha um número de 1 a 8.");
-                }
             }
         }
-
-        /**/
 
         static double ExecutarOperacao(double primeiroNumero, double segundoNumero, int escolha)
         {
@@ -114,13 +100,9 @@ namespace Calculadora
                 Console.Write("Deseja realizar outra operação? (S/N): ");
                 string opcao = Console.ReadLine().ToUpper();
                 if (opcao == "S")
-                {
                     return true;
-                }
                 else if (opcao == "N")
-                {
                     return false;
-                }
             }
         }
     }
